@@ -1,10 +1,15 @@
-import './App.css'
-import NotesApp from './components/NotesApp'
+
+import { Provider } from 'react-redux';
+import NotesApp from './components/NotesApp';
+import { store } from './store/store';
+
 
 function App() {
-
-
-  return   <NotesApp />;
+  return (
+    <Provider store={store}>
+      <NotesApp />
+    </Provider>
+  );
 }
 
-export default App
+export default App;
